@@ -30,6 +30,7 @@ while len(oldest_to_newest_backup_by_name) >= MAX_BACKUP_AMOUNT:  # >= because w
 # Create zip file (for both file and folder options)
 backup_file_name = 'backup.zip'
 zip_file = zipfile.ZipFile(str(backup_directory_path / backup_file_name), mode='w')
+'''
 if object_to_backup_path.is_file():
     # If the object to write is a file, write the file
     zip_file.write(
@@ -44,6 +45,6 @@ elif object_to_backup_path.is_dir():
                 file.absolute(),
                 arcname=str(file.relative_to(object_to_backup_path)),
                 compress_type=zipfile.ZIP_DEFLATED
-            )
+            )'''
 # Close the created zip file
 zip_file.close()
